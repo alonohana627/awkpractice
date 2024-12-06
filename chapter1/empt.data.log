@@ -1,0 +1,21 @@
+> awk '$1 {print $1}' ./empt.data
+Kathy
+Mark
+Mary
+Susi
+
+> awk '$3 > 10 {print $3}' ./empt.data
+20
+22
+18
+
+> awk '$3 > 10 {print $1, $3 * $2 }' ./empt.data
+Mark 500
+Mary 495
+Susie 306
+
+> awk '$3 == 0 {print $1 }' ./empt.data
+Beth
+Dan
+
+

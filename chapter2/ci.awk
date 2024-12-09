@@ -1,5 +1,8 @@
+#!/bin/sh
+
 # cf: units conversion for temperature, length, weight
-awk 'BEGIN {
+awk '
+BEGIN {
     t=ARGV[1] # first command-line argument
     printf("%s C = %.1f F; %s F = %.1f C\n",
     t, t*9/5 + 32, t, (t-32)*5/9)
